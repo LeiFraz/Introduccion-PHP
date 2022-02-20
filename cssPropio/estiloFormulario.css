@@ -2,7 +2,9 @@
     box-sizing: border-box;
 }
 
-/*SECCION*/
+/*-------------*/
+/*-- SECCION --*/
+/*-------------*/
 .miFormulario{
     max-width: 800px;
     width: 90%;
@@ -19,7 +21,9 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.692), 0 6px 20px 0 rgba(0, 0, 0, 0.685);
 }
 
-/*FORMULARIO*/
+/*----------------*/
+/*-- FORMULARIO --*/
+/*----------------*/
 .formu{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -28,7 +32,9 @@
     margin-top: 20px;
 }
 
-/*LABEL*/
+/*-----------*/
+/*-- LABEL --*/
+/*-----------*/
 .formu__label{
     display: block;
     font-weight: 750;
@@ -36,12 +42,16 @@
     
     cursor: pointer;
 }
+/*-----------*/
+/*-- INPUT --*/
+/*-----------*/
 
-/* GRUPO DEL INPUT*/
+/*div del input*/
 .formu__grupo-input{
     position: relative;
 }
 
+/*input*/
 .formu__input{
     width: 100%;
     height: 35px;
@@ -50,7 +60,172 @@
     border: 2px solid transparent;
     border-radius: 10px;
 
-    padding: 0 30px 0 10px;
+    padding: 0 40px 0 10px;
 
     transition: .2s ease all;
+
+    background: rgba(228, 196, 128, 0.664);
+}
+
+.formu__input:focus{
+
+    border: 2px solid rgba(184, 128, 7, 0.979);
+    outline: none;
+
+    box-shadow: 0 4px 8px 0 rgba(117, 81, 4, 0.747), 0 6px 20px 0 rgba(122, 84, 3, 0.795);
+}
+
+.formu__input:hover{
+    border: 2px solid rgba(184, 128, 7, 0.979);
+    outline: none;
+
+    box-shadow: 0 4px 8px 0 rgba(117, 81, 4, 0.747), 0 6px 20px 0 rgba(122, 84, 3, 0.795);
+}
+
+/* error del input*/
+.formu__input-error{
+    font-size: 13px;
+    margin-top: 10px;
+    
+    display: none;
+}
+
+/*cuando sucede un error se le pone esta clase*/
+.formu__input-error-activo{
+    display: none;
+}
+
+/*----------------------------------------------*/
+/*-- VALIDACION DEL ESTADO - ICONO NO VISIBLE --*/
+/*----------------------------------------------*/
+.formu__validacion-estado{
+    position: absolute;
+    right: 20px;
+    top: 7px;
+    z-index: 100;
+
+    font-size: 20px;
+    opacity: 0;
+}
+
+/*--------------------------------------*/
+/*-- DIV MENSAJE DE ERROR Y BTN ENVIAR--*/
+/*--------------------------------------*/
+.formu__mensaje-error,
+.formu__grupo-btn-enviar{
+    grid-column: span 2;
+}
+
+/*----------------------*/
+/*-- MENSAJE DE ERROR --*/
+/*----------------------*/
+.formu__mensaje-error{
+    height: 35px;
+    line-height: 35px;
+    border-radius: 10px;
+    padding: 0 20px;
+
+    background: rgba(230, 22, 22, 0.863);
+
+    display: none;
+}
+
+.formu__mensaje-error p{ /*quiero que el parrafo que ese div tenga dentro, tenga un margen de 0*/
+    margin: 0;
+}
+
+.formu__mensaje-error-activo{
+    display: block;
+}
+
+/*----------------------*/
+/*-- DIV BOTON ENVIAR --*/
+/*----------------------*/
+.formu__grupo-btn-enviar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*------------------*/
+/*-- BOTON ENVIAR --*/
+/*------------------*/
+.formu__btn-enviar{
+    background: rgba(184, 128, 7, 0.979);
+    box-shadow: 0 4px 8px 0 rgba(92, 90, 90, 0.247), 0 6px 20px 0 rgba(129, 125, 125, 0.164);
+    color: #fff;
+    font-weight: bold;
+
+    width: 40%;
+    height: 24px;
+    line-height: 24px;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: .1s ease all;
+}
+
+.formu__btn-enviar:hover{
+    box-shadow: 0 4px 8px 0 rgba(92, 90, 90, 0.486), 0 6px 20px 0 rgba(129, 125, 125, 0.466);
+}
+
+/*----------------------*/
+/*-- MENSAJE DE EXITO --*/
+/*----------------------*/
+.formu__mensaje-exito{
+    font-size: 15px;
+    color: rgb(20, 148, 3);
+    font-weight: bold;
+
+    display: none
+}
+
+.formu__mensaje-exito-activo{
+    display: block;
+}
+
+/*----------------------------------------------------------*/
+/*-- VALIDACION DE ESTADO - COLORES (CORRECTO/INCORRECTO) --*/
+/*----------------------------------------------------------*/
+
+/* cuando es correcto*/
+.formu__grupo-correcto .formu__validacion-estado{
+    color: rgb(58, 170, 43);
+    opacity: 1;
+}
+
+/* cuando es incorrecto*/
+
+.formu__grupo-incorrecto .formu__label{
+    color: rgb(170, 43, 43);
+}
+
+.formu__grupo-incorrecto .formu__input{
+    border-color: rgb(170, 43, 43);
+}
+
+.formu__grupo-incorrecto .formu__validacion-estado{
+    color: rgb(170, 43, 43);
+    opacity: 1;
+}
+
+
+/* SI LA PANTALLA DEL DISPOSITIVO ES DE 800PX O MENOS*/
+
+@media screen and (max-width: 800px){
+
+    .formu{
+        grid-template-columns: 1fr;
+    }
+
+    .formu__mensaje-error,
+    .formu__grupo-btn-enviar{
+        grid-column: span 1;
+    }
+
+    .formu__btn-enviar{
+        width: 80%;
+    }
 }

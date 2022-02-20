@@ -18,7 +18,10 @@
         <a href="">Datos</a>   <!--Se muestran los datos cargados en la pagina-->
         <a href="">Procesos</a> <!--Pensando-->
     </nav>
-
+    <!--
+    <i class="formu__validacion-estado fa fa-thumbs-up"></i>
+    <i class="formu__validacion-estado fa fa-thumbs-down"></i>
+    -->
     <section class="miFormulario">
         Mi Formulario
         <hr>
@@ -30,8 +33,7 @@
 
                 <div class="formu__grupo-input">
                     <input class="formu__input" type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario">
-                    <i class="formu__validacion-estado fa fa-thumbs-up"></i>
-                    <i class="formu__validacion-estado fa fa-thumbs-down"></i>
+                    <i class="formu__validacion-estado fa-regular fa-thumbs-up"></i>
                 </div>
 
                 <p class="formu__input-error">El usuario tiene que ser de 4 a 16 digitos y solo puede contener numeros, letras y guion bajo.</p>
@@ -44,8 +46,7 @@
 
                 <div class="formu__grupo-input">
                     <input class="formu__input" type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
-                    <i class="formu__validacion-estado fa fa-thumbs-up"></i>
-                    <i class="formu__validacion-estado fa fa-thumbs-down"></i>
+                    <i class="formu__validacion-estado fa-regular fa-thumbs-up"></i>
                 </div>
 
                 <p class="formu__input-error">El nombre tiene que ser de 4 a 16 digitos y solo debe contener letras.</p>
@@ -59,7 +60,6 @@
                 <div class="formu__grupo-input">
                     <input class="formu__input" type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
                     <i class="formu__validacion-estado fa-regular fa-thumbs-up"></i>
-                    <i class="formu__validacion-estado fa-regular fa-thumbs-down"></i>
                 </div>
 
                 <p class="formu__input-error">El apellido tiene que ser de 4 a 16 digitos y solo debe contener letras.</p>
@@ -73,7 +73,6 @@
                 <div class="formu__grupo-input">
                     <input class="formu__input" type="email" id="correo" name="correo" placeholder="Ingresa tu correo">
                     <i class="formu__validacion-estado fa-regular fa-thumbs-up"></i>
-                    <i class="formu__validacion-estado fa-regular fa-thumbs-down"></i>
                 </div>
 
                 <p class="formu__input-error">El correo solo puede contener letras, numeros, guiones, guion bajo y puntos.</p>
@@ -86,7 +85,7 @@
 
             <!-- GRUPO BOTON -->
             <div class="formu__grupo formu__grupo-btn-enviar">
-                <button class="formu__btn" type="submit"> Enviar</button>
+                <button class="formu__btn-enviar" type="submit"> Enviar</button>
                 <p class="formu__mensaje-exito">Formulario enviado exitosamente!</p>
             </div>
         </form>
