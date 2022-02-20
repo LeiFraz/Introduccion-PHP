@@ -13,7 +13,7 @@
 </head>
 <body>
     <nav>
-        <a href="index.php">Inicio</a> <!--inicio de la pagina-->
+        <a href="index.html">Inicio</a> <!--inicio de la pagina-->
         <a href="formulario.php">Formulario</a> <!--formulario de la pagina-->
         <a href="">Datos</a>   <!--Se muestran los datos cargados en la pagina-->
         <a href="">Procesos</a> <!--Pensando-->
